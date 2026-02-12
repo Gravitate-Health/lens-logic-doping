@@ -278,8 +278,13 @@ function getReport(lang = "en") {
 
 // --- Get user-facing report sentence in the selected language ---
 function getExplanation(lang = "en") {
-  console.log("Generating explanation in language:", lang);
-  return "";
+    const explanations = {
+        en: "This lens highlights substances that may be prohibited for professional athletes.",
+        pt: "Esta lente destaca substâncias que podem ser proibidas para atletas profissionais.",
+        es: "Esta lente resalta las sustancias que pueden estar prohibidas para los atletas profesionales.",
+        da: "Denne linse fremhæver stoffer, der kan være forbudt for professionelle atleter.",
+    };
+    return explanations[lang] || explanations.en;
 }
 
 // --- Exported API ---
